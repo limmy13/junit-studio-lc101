@@ -28,6 +28,10 @@ public class BalancedBrackets {
                 brackets++;
             } else if (ch == ']') {
                 brackets--;
+
+                // check for mis-nesting
+                if (brackets < 0);
+                return false;
             }
         }
         return brackets == 0;

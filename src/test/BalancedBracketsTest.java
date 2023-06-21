@@ -53,4 +53,26 @@ public class BalancedBracketsTest {
         assertFalse(BalancedBrackets.hasBalancedBrackets(expected));
     }
 
+    @Test // 7
+    public void stringWithMisNestedBrackets() {
+        String spec = "Tests a string that contains mis-nested brackets";
+        String expected = "Launch]Co[de"; // String with mis-nested brackets
+        assertFalse(BalancedBrackets.hasBalancedBrackets(expected));
+    }
+
+    @Test // 8
+    public void stringWithOnlyOneOpenBracket() {
+        String spec = "Tests a string that contains only an opening bracket";
+        String expected = "[";
+        assertFalse(BalancedBrackets.hasBalancedBrackets(expected));
+    }
+
+    @Test //9
+    public void StringWithOnlyOneCloseBracket(){
+        String spec = "Tests a string that contains only one closed bracket";
+        String expected = "]";
+        assertFalse(BalancedBrackets.hasBalancedBrackets(expected));
+    }
+
+
 }
